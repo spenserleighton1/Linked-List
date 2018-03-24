@@ -8,7 +8,7 @@
 </head>
 <body>
 <section class="email">
-  <header><b>Linked <img src="images/linked-list-logo.svg" height="40px"> List</b></header>
+  <header><b>Linked <img src="images/linked-list-logo.svg" class="header-img"> List</b></header>
     <fieldset>
       <form>
         <input id="website-title" type="text" size="55%" placeholder="Website Title">
@@ -22,10 +22,19 @@
     </fieldset>
 </section>
 <section class="output">
-  <article class="bookmarks">bookmark 1</article>
-  <article class="bookmarks">bookmark 2</article>
-  <article class="bookmarks">bookmark 3</article>
+  <article class="bookmarks">
+    <h1 class="bookmark-h1" width="100%">The Website Title</h1>
+    <p id="websiteLink">websiteURL.com</p>
+    <button id="readButton">Read</button>
+    <button id="deleteButton">Delete</button>
+  </article>
+  <article class="bookmarks">bookmark 2
+    <h1 class="bookmark-h1"></h1>
+  </article>
+  <article class="bookmarks">bookmark 3
+    <h1 class="bookmark-h1"></h1>
+  </article>
 </section>
-<script type="text/javascript" src="javaScript.js"></script>
+<script src="javaScript.js"></script>
 </body>
 </html>

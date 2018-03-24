@@ -6,6 +6,9 @@ body {
 
   margin-top: 60px;
 }
+.header-img  {
+  height:50px;
+}
 
 header {
   color: #FFFFFF;
@@ -54,6 +57,9 @@ button:hover {
   width: 90%;
   height: 28%;
   border: 1px solid black;
+  border-color: #607D8B;
+  color: #455A64;
+  background-color: #ffffff;
 }
 
 .email {
@@ -72,3 +78,45 @@ button:hover {
   top: 0;
   background-color: #D1D8DC;
 }
+.bookmark-h1  {
+  text-align: left;
+  margin:10px;
+  margin-left: 20px;
+  font-size: 35px;
+  font-weight: 600;
+  text-decoration: underline;
+  
+}
+#readButton,
+#deleteButton  {
+  background-color: #ffffff;
+  color: #455A64;
+  width: 60px;
+  height: 20px;
+  vertical-align: bottom;
+}
+#readButton  {
+  
+}
+#websiteLink  {
+  color: #607D8B;
+  font-size: 30px;
+  text-align: left;
+  margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
