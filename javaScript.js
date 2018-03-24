@@ -1,15 +1,15 @@
 var enterButton = document.querySelector("#enter");
 var websiteTitle = document.querySelector('#website-title');
 var websiteUrl = document.querySelector('#website-url');
-var websiteLink = document.querySelector('#websiteLink')
+// var websiteLink = document.querySelectorAll('p')
 
 enterButton.addEventListener('click', function() {
   event.preventDefault(); 
       console.log("enter button working");
-      websiteLink.innerText = websiteUrl ;
+      websiteUrl.innerText = websiteTitle;
       });
 
 
 if (websiteTite = "") {
-document.querySelector("boolmarks").style.display = "none";
+document.querySelector("bookmarks").style.display = "none";
 }
