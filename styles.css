@@ -79,7 +79,7 @@ button:hover {
 .bookmarks {
   margin: 3%;
   width: 90%;
-  height: 250px;
+  height: 230px;
   border: 3px solid #607D8B;
   color: #455A64;
   background-color: #ffffff;
@@ -115,15 +115,7 @@ button:hover {
   width: 325px;
   height: 33px;
 }
-
-.bookmarks {
-  margin: 5%;
-  width: 90%;
-  height: 28%;
-  border: 1px solid black;
-}
-
-.email {
+.left {              /*dfsdhjhgbfgrhtyjhmngfrthjydhgnbfgrethjyfghbfgrhtdfgnhtrjyghfnb*/
   padding-top: 15%;
   position: absolute;
   left: 0;
@@ -132,16 +124,12 @@ button:hover {
 }
 
 .right {
-  background-color: #495963;
-}
-
-.output {
   text-align: center;
   position: absolute;
   right: 0;
   top: 0;
   background-color: #D1D8DC;
-  overflow: scroll;
+  overflow: scroll
 }
 .bookmark-h1  {
   text-align: left;
@@ -162,17 +150,17 @@ button:hover {
   display: inline;
   font-size: 25px;
 }
+
 #readButton  {
   position: absolute;
   left: 15%;
 }
+
 #deleteButton  {
   position: absolute;
   right: 12%;
 }
-.left-table  {
-  text-align: left;
-}
+
 #websiteLink  {
   position: relative;
   padding: 25px;
@@ -183,7 +171,8 @@ button:hover {
   margin: 15px;
   border-bottom: 2px solid #CFD8DC;
 }
-article  {
+a  {
+  display: block;
 }
 
 ul {
