@@ -150,14 +150,17 @@ button:hover {
   display: inline;
   font-size: 25px;
 }
+
 #readButton  {
   position: absolute;
   left: 15%;
 }
+
 #deleteButton  {
   position: absolute;
   right: 12%;
 }
+
 #websiteLink  {
   position: relative;
   padding: 25px;
