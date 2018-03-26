@@ -5,6 +5,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   margin-top: 60px;
 }
+
 .header-img  {
   height:50px;
 }
@@ -17,6 +18,7 @@ header {
 
   /*font-weight: bold 800;*/
 }
+
 #website-title,
 #url  {
   font-size: 30px;
@@ -27,12 +29,15 @@ header {
   color: black;
   text-indent: 15px;
 }
+
 #website-title::placeholder,
 #url::placeholder  {
   color: #BBBDBF;
 }
+
 form {
 }
+
 fieldset {
   /*text-align: center;*/
   border: 0;
