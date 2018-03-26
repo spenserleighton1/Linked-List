@@ -12,9 +12,12 @@ enterButton.onclick = function() {
  event.preventDefault();
 
 document.getElementById("list").innerHTML+=
-   `<li id="bookmarks">
-   <h1 id="bookmark" width="100%">${websiteTitle.value}</h1>
-   <p id="websiteLink">${websiteUrl.value}</p>
+   `<article class="bookmarks">
+   <li id="bookmarks">
+   <h1 class="bookmark-h1" id="bookmarks" width="100%">${websiteTitle.value}</h1>
+   <a id="websiteLink" href="${websiteUrl.value}">${websiteUrl.value}</a>
    <button id="readButton">Read</button>
-   <button id="deleteButton">Delete</button>`
+   <button id="deleteButton">Delete</button>
+   </article>`
+
 };
