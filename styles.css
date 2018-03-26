@@ -3,6 +3,39 @@ body {
   width: 100%;
   height: 100%;
   font-family: 'Open Sans', sans-serif;
+  margin-top: 60px;
+}
+
+.header-img  {
+  height:50px;
+}
+
+header {
+  width: 100%;
+  color: #FFFFFF;
+  font-size: 70px;
+  margin-bottom: 20px;
+
+  /*font-weight: bold 800;*/
+}
+
+#website-title,
+#url  {
+  font-size: 30px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  width: 65%;
+  margin-bottom: 25px;
+  color: black;
+  text-indent: 15px;
+}
+
+#website-title::placeholder,
+#url::placeholder  {
+  color: #BBBDBF;
+}
+
+form {
 
   margin-top: 60px;
 }
@@ -19,6 +52,40 @@ form {
 
 fieldset {
   /*text-align: center;*/
+  border: 0;
+}
+section {
+  text-align: center;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 50%;
+  height: 100%;
+  min-width: 500px;
+}
+button {
+  border: 0px;
+}
+#enter  {
+  background-color: #FFC107;
+  font-size: 25px;
+  color: white;
+  width: 66%;
+  height: 60px;
+}
+
+button:hover {
+  background-color: #FFD773;
+}
+.bookmarks {
+  margin: 3%;
+  width: 90%;
+  height: 250px;
+  border: 3px solid #607D8B;
+  color: #455A64;
+  background-color: #ffffff;
+}
+
+.left {
 border: 0;
 }
 
@@ -61,7 +128,10 @@ button:hover {
   position: absolute;
   left: 0;
   top: 0;
+  background-color: #495963;
+}
 
+.right {
   background-color: #495963;
 }
 
@@ -71,4 +141,69 @@ button:hover {
   right: 0;
   top: 0;
   background-color: #D1D8DC;
+  overflow: scroll;
 }
+.bookmark-h1  {
+  text-align: left;
+  margin:10px;
+  margin-left: 20px;
+  font-size: 35px;
+  font-weight: 400;
+  border-bottom: 2px solid #CFD8DC;
+  
+}
+#readButton,
+#deleteButton  {
+  background-color: transparent;
+  color: #455A64;
+  width: 60px;
+  height: 20px;
+  vertical-align: bottom;
+  display: inline;
+  font-size: 25px;
+}
+#readButton  {
+  position: absolute;
+  left: 15%;
+}
+#deleteButton  {
+  position: absolute;
+  right: 12%;
+}
+.left-table  {
+  text-align: left;
+}
+#websiteLink  {
+  position: relative;
+  padding: 25px;
+  color: #607D8B;
+  font-size: 30px;
+  text-align: left;
+  margin-left: 20px;
+  margin: 15px;
+  border-bottom: 2px solid #CFD8DC;
+}
+article  {
+}
+
+ul {
+  list-style-type: none;
+}
+
+.read  {  /* bookmarks marked as read */
+  background-color: #F2F4F4;
+}
+
+#enter:hover  {
+  background-color: #FFD773;
+}
+
+
+#readButton:hover,
+#deleteButton:hover,
+#websiteLink:hover  {
+  font-weight: 600;
+  text-decoration: underline #FFC107;
+}
+
+
