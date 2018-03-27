@@ -179,14 +179,27 @@ ul {
   list-style-type: none;
 }
 
-.read  {  /* bookmarks marked as read */
+.delete {
+  display: none;
+  color: red;
+  margin: 0;
+  width: 0;
+  height: 0;
+ 
+}
+
+.read  {
   background-color: #F2F4F4;
+  margin: 3%;
+  width: 90%;
+  height: 230px;
+  border: 3px solid #607D8B;
+
 }
 
 #enter:hover  {
   background-color: #FFD773;
 }
-
 
 #readButton:hover,
 #deleteButton:hover,
@@ -194,5 +207,6 @@ ul {
   font-weight: 600;
   text-decoration: underline #FFC107;
 }
+
 
 
