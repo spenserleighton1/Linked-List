@@ -12,7 +12,7 @@ body {
   font-size: 40px;
 }
 
-h1 {
+h2 {
   color: #FFFFFF;
   font-size: 20px;
 }
@@ -52,8 +52,8 @@ form {
 }
 
 header {
-  color: #FFFFFF;
-  font-size: 50px
+ /* color: #FFFFFF;
+  font-size: 50px*/
   /*font-weight: bold 800;*/
 }
 
@@ -126,7 +126,7 @@ button:hover {
   width: 325px;
   height: 33px;
 }
-.left {              /*dfsdhjhgbfgrhtyjhmngfrthjydhgnbfgrethjyfghbfgrhtdfgnhtrjyghfnb*/
+.left {
   padding-top: 15%;
   position: absolute;
   left: 0;
@@ -149,8 +149,19 @@ button:hover {
   font-size: 35px;
   font-weight: 400;
   border-bottom: 2px solid #CFD8DC;
+  color: #455a64;
   
 }
+.read  {
+  margin: 3%;
+  width: 90%;
+  height: 230px;
+  color: #455A64;
+  background-color: #F2F4F4;
+}
+
+
+
 #readButton,
 #deleteButton  {
   background-color: transparent;
@@ -161,6 +172,7 @@ button:hover {
   display: inline;
   font-size: 25px;
 }
+
 
 #readButton  {
   position: absolute;
@@ -182,6 +194,7 @@ button:hover {
   margin: 15px;
   border-bottom: 2px solid #CFD8DC;
 }
+
 a  {
   display: block;
 }
@@ -191,22 +204,20 @@ ul {
 }
 
 .delete {
-  display: none;
-  color: red;
-  margin: 0;
-  width: 0;
-  height: 0;
- 
-}
 
-.read  {
-  background-color: #F2F4F4;
   margin: 3%;
   width: 90%;
   height: 230px;
-  border: 3px solid #607D8B;
 
+
+  display: none;
+  color: red;
+/*  margin: 0;
+  width: 0;
+  height: 0;*/
+ 
 }
+
 
 #enter:hover  {
   background-color: #FFD773;
@@ -218,6 +229,19 @@ ul {
   font-weight: 600;
   text-decoration: underline #FFC107;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

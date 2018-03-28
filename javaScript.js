@@ -3,50 +3,51 @@ var websiteTitle = document.querySelector('#website-title');
 var websiteUrl = document.querySelector('#url');
 var bookmarkTitle = document.querySelector('#bookmark')
 var websiteLink = document.querySelector('#websiteLink')
-
-var cardCounter = 0;
+var cardCount = 0;
 
 enterButton.onclick = function() {
  event.preventDefault();
-  console.log(cardCounter);
+  console.log(cardCount);
  if (websiteTitle.value === "") {
   alert('Please fill required fields');
  } else {
   document.querySelector("#list").innerHTML +=
    
        `<article class="bookmarks">
-       <li class="unread" id="bookmarks">
-       <h1 class="bookmark-h1" id="bookmarks" width="100%">${websiteTitle.value}</h1>
+       <li class="unread">
+       <h1 class="bookmark-h1" width="100%">${websiteTitle.value}</h1>
        <a id="websiteLink" href="${websiteUrl.value}">${websiteUrl.value}</a>
-       <button class="read" id="readButton" onclick="markCardRead(${cardCounter})">Read</button>
-       <button class="delete" id="deleteButton" onclick="deleteCard(${cardCounter})">Delete</button>
+       <button class="read" id="readButton" onclick="markCardRead(${cardCount})">Read</button>
+       <button class="delete" id="deleteButton" onclick="deleteCard(${cardCount})">Delete</button>
        </li>
        </article>`
 
   };
 
-cardCounter++;
-document.querySelector('.counter').innerText = cardCounter;
+document.querySelector("form").reset();
 
-console.log(ul.value)
-console.log(Array.from(cardCounter.value));
+cardCount++;
+document.querySelector('.counter').innerText = cardCount;
 };
 
 function markCardRead(cardId){
-//figure out how to target specific cardId and delete that shit!
-
   var bookmarkCard = document.querySelector('.bookmarks');
   bookmarkCard.classList.toggle('read');
   console.log(cardId, " card clicked");
 };
 
+//figure out how to target specific cardId and delete that shit!
 function deleteCard(cardId){
+  cardCount = cardCount -1;
+  document.querySelector('.counter').innerText = cardCount;
   var bookmarkCard = document.querySelector('.bookmarks');
   bookmarkCard.className ='delete';
   console.log(cardId, " card delete");
-  cardCounter--;
 };
 
+
+
+//.closest('article')
 
 
 
