@@ -8,7 +8,7 @@ var websiteLink = document.querySelector('#websiteLink')
 
 enterButton.onclick = function() {
  event.preventDefault();
- if (websiteTitle.value === "") {
+ if (websiteTitle.value === ""| websiteUrl.value === "") {
   alert('Please fill required fields');
  } else {
 document.getElementById("list").innerHTML+=
@@ -21,6 +21,14 @@ document.getElementById("list").innerHTML+=
    </li>
    </article>`
 
+
+function disableButton()  {
+  
+}
+
+
+
+
 // var deleteButton = document.querySelector("#deleteButton");
 // deleteButton.onclick = function() {
 //   if(deleteButton.className === 'delete'){
@@ -29,6 +37,10 @@ document.getElementById("list").innerHTML+=
 //     deleteButton.className = 'delete';
 //   }
 // }
+
+var x = document.getElementsByClassName("delete");
+
+
 
 var readButton = document.querySelector(".bookmarks");
 readButton.onclick = function() {

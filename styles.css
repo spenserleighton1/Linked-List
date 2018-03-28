@@ -42,7 +42,7 @@ form {
 
 header {
   color: #FFFFFF;
-  font-size: 50px
+  font-size: 5rem;
   /*font-weight: bold 800;*/
 }
 
@@ -115,7 +115,7 @@ button:hover {
   width: 325px;
   height: 33px;
 }
-.left {              /*dfsdhjhgbfgrhtyjhmngfrthjydhgnbfgrethjyfghbfgrhtdfgnhtrjyghfnb*/
+.left {              /**/
   padding-top: 15%;
   position: absolute;
   left: 0;
