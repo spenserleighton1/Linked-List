@@ -3,42 +3,46 @@ var websiteTitle = document.querySelector('#website-title');
 var websiteUrl = document.querySelector('#url');
 var bookmarkTitle = document.querySelector('#bookmark')
 var websiteLink = document.querySelector('#websiteLink')
-// var readButton = document.querySelector('#readButton');
 
+var cardCounter = 0;
 
 enterButton.onclick = function() {
  event.preventDefault();
+  console.log(cardCounter);
  if (websiteTitle.value === "") {
   alert('Please fill required fields');
  } else {
-document.getElementById("list").innerHTML+=
+  document.querySelector("#list").innerHTML +=
    `<article class="bookmarks">
    <li class="unread" id="bookmarks">
    <h1 class="bookmark-h1" id="bookmarks" width="100%">${websiteTitle.value}</h1>
    <a id="websiteLink" href="${websiteUrl.value}">${websiteUrl.value}</a>
-   <button id="readButton">Read</button>
-   <button class="delete" id="deleteButton">Delete</button>
+   <button class="read" id="readButton" onclick="markCardRead(${cardCounter})">Read</button>
+   <button class="delete" id="deleteButton" onclick="deleteCard(${cardCounter})">Delete</button>
    </li>
    </article>`
-
-// var deleteButton = document.querySelector("#deleteButton");
-// deleteButton.onclick = function() {
-//   if(deleteButton.className === 'delete'){
-//     // deleteButton.className = null;
-//   } else {
-//     deleteButton.className = 'delete';
-//   }
-// }
-
-var readButton = document.querySelector(".bookmarks");
-readButton.onclick = function() {
-if(readButton.className === 'read'){
-   readButton.className = 'bookmarks';
-   //change color of read button//
-} else {
-    readButton.className = 'read';
-     };
-   };
   };
+  cardCounter++;
+var counter = document.querySelector('.counter');
+counter.innerText = cardCounter;
+
 };
-//delete button acts same as read button because im targeting the bookmark class
+
+
+function markCardRead(cardId){
+
+  var bookmarkCard = document.querySelector('.bookmarks');
+  bookmarkCard.classList.toggle('read');
+  console.log(cardId, " card clicked");
+};
+
+function deleteCard(cardId){
+
+  var bookmarkCard = document.querySelector('.bookmarks');
+  bookmarkCard.className ='delete';
+  console.log(cardId, " card delete");
+  cardCounter--;
+};
+
+
+
