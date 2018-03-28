@@ -13,23 +13,27 @@ enterButton.onclick = function() {
   alert('Please fill required fields');
  } else {
   document.querySelector("#list").innerHTML +=
-   `<article class="bookmarks">
-   <li class="unread" id="bookmarks">
-   <h1 class="bookmark-h1" id="bookmarks" width="100%">${websiteTitle.value}</h1>
-   <a id="websiteLink" href="${websiteUrl.value}">${websiteUrl.value}</a>
-   <button class="read" id="readButton" onclick="markCardRead(${cardCounter})">Read</button>
-   <button class="delete" id="deleteButton" onclick="deleteCard(${cardCounter})">Delete</button>
-   </li>
-   </article>`
-  };
-  cardCounter++;
-var counter = document.querySelector('.counter');
-counter.innerText = cardCounter;
+   
+       `<article class="bookmarks">
+       <li class="unread" id="bookmarks">
+       <h1 class="bookmark-h1" id="bookmarks" width="100%">${websiteTitle.value}</h1>
+       <a id="websiteLink" href="${websiteUrl.value}">${websiteUrl.value}</a>
+       <button class="read" id="readButton" onclick="markCardRead(${cardCounter})">Read</button>
+       <button class="delete" id="deleteButton" onclick="deleteCard(${cardCounter})">Delete</button>
+       </li>
+       </article>`
 
+  };
+
+cardCounter++;
+document.querySelector('.counter').innerText = cardCounter;
+
+console.log(ul.value)
+console.log(Array.from(cardCounter.value));
 };
 
-
 function markCardRead(cardId){
+//figure out how to target specific cardId and delete that shit!
 
   var bookmarkCard = document.querySelector('.bookmarks');
   bookmarkCard.classList.toggle('read');
@@ -37,7 +41,6 @@ function markCardRead(cardId){
 };
 
 function deleteCard(cardId){
-
   var bookmarkCard = document.querySelector('.bookmarks');
   bookmarkCard.className ='delete';
   console.log(cardId, " card delete");
@@ -46,3 +49,5 @@ function deleteCard(cardId){
 
 
 
+
+  // delete article(cardId);

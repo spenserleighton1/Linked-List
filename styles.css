@@ -6,8 +6,13 @@ body {
   margin-top: 60px;
 }
 
-h1,
+
 .counter {
+  color: #FFC107;
+  font-size: 40px;
+}
+
+h1 {
   color: #FFFFFF;
   font-size: 20px;
 }
@@ -52,9 +57,9 @@ header {
   /*font-weight: bold 800;*/
 }
 
-form {
+/*form {
 
-}
+}*/
 
 fieldset {
   /*text-align: center;*/
