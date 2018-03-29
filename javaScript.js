@@ -1,15 +1,24 @@
-var enterButton = document.querySelector("#enter");
-var websiteTitle = document.querySelector('#website-title');
-var websiteUrl = document.querySelector('#url');
+var enterButton = document.querySelector("#enter-button");
+var websiteTitle = document.querySelector('#website-input-field');
+var websiteUrl = document.querySelector('#url-input-field');
 var bookmarkTitle = document.querySelector('#bookmark')
 var websiteLink = document.querySelector('#websiteLink')
 var cardCount = 0;
 
-enterButton.onclick = function() {
- event.preventDefault();
-  console.log(cardCount);
- if (websiteTitle.value === "") {
+
+// document.querySelector('ul').addEventListener('click', function(event) {
+//   if (event.target.tagName.deleteCard() === 'article') {
+//     console.log('yes')
+//     // do your action on your 'li' or whatever it is you're listening for
+//   }
+// })
+
+
+enterButton.onclick = function(e) {
+ e.preventDefault();
+ if (websiteTitle.value === "" || websiteUrl.value === "") {
   alert('Please fill required fields');
+  return
  } else {
   document.querySelector("#list").innerHTML +=
    
@@ -23,20 +32,19 @@ enterButton.onclick = function() {
        </article>`
 
   };
+  cardCount++;
 
 document.querySelector("form").reset();
-
-cardCount++;
 document.querySelector('.counter').innerText = cardCount;
 };
+//figure out how to target specific cardId and delete that shit!
 
 function markCardRead(cardId){
-  var bookmarkCard = document.querySelector('.bookmarks');
-  bookmarkCard.classList.toggle('read');
-  console.log(cardId, " card clicked");
+  var bookmarkCard = document.querySelector('.bookmarks',)
+  bookmarkCard.classList.toggle('bookmarksRead');
+  // console.log(cardId, " card clicked");
 };
 
-//figure out how to target specific cardId and delete that shit!
 function deleteCard(cardId){
   cardCount = cardCount -1;
   document.querySelector('.counter').innerText = cardCount;
@@ -44,11 +52,3 @@ function deleteCard(cardId){
   bookmarkCard.className ='delete';
   console.log(cardId, " card delete");
 };
-
-
-
-//.closest('article')
-
-
-
-  // delete article(cardId);

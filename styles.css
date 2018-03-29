@@ -6,87 +6,77 @@ body {
   margin-top: 60px;
 }
 
+.left {
+  border: 0;
+  padding-top: 75px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #495963;
+}
+
+.right {
+  text-align: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #D1D8DC;
+  overflow: scroll
+}
+
+/* Header styles*/
+header {
+  width: 100%;
+  color: #FFFFFF;
+  font-size: 70px;
+  margin-bottom: 50px;
+  font-weight: 800;
+
+}
+
+h2 {
+  margin: 5%;
+  color: #FFFFFF;
+  font-size: 20px;
+}
+
+img {
+  height:55px;
+}
+
+/*Form Styles*/
+.input-field {
+  font-size: 30px;
+  padding: 8px;
+  width: 85%;
+  margin-bottom: 40px;
+  color: black;
+  text-indent: 15px;
+}
+
+#enter-button {
+  background-color: #FFC107;
+  font-size: 25px;
+  color: white;
+  width: 85%;
+  height: 60px;
+}
 
 .counter {
   color: #FFC107;
   font-size: 40px;
 }
 
-h2 {
-  color: #FFFFFF;
-  font-size: 20px;
-}
-
-.header-img  {
-  height:50px;
-}
-
-header {
-  width: 100%;
-  color: #FFFFFF;
-  font-size: 70px;
-  margin-bottom: 20px;
-
-  /*font-weight: bold 800;*/
-}
-
-#website-title,
-#url  {
-  font-size: 30px;
-  padding-top: 9px;
-  padding-bottom: 9px;
-  width: 65%;
-  margin-bottom: 25px;
-  color: black;
-  text-indent: 15px;
-}
-
-#website-title::placeholder,
-#url::placeholder  {
-  color: #BBBDBF;
-}
-
-form {
-
-  margin-top: 60px;
-}
-
-header {
- /* color: #FFFFFF;
-  font-size: 50px*/
-  /*font-weight: bold 800;*/
-}
-
-/*form {
-
-}*/
-
-fieldset {
-  /*text-align: center;*/
-  border: 0;
-}
-section {
-  text-align: center;
-  display: inline-block;
-  box-sizing: border-box;
-  width: 540%;
-  height: 100%;
-  min-width: 500px;
-}
-button {
-  border: 0px;
-}
-#enter  {
-  background-color: #FFC107;
-  font-size: 25px;
-  color: white;
-  width: 66%;
-  height: 60px;
+/*List Styles*/
+.input-field::placeholder {
+  text-align: left;
+  color: lightgray;
 }
 
 button:hover {
   background-color: #FFD773;
 }
+
 .bookmarks {
   margin: 3%;
   width: 90%;
@@ -94,10 +84,6 @@ button:hover {
   border: 3px solid #607D8B;
   color: #455A64;
   background-color: #ffffff;
-}
-
-.left {
-border: 0;
 }
 
 section {
@@ -126,22 +112,7 @@ button:hover {
   width: 325px;
   height: 33px;
 }
-.left {
-  padding-top: 15%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: #495963;
-}
 
-.right {
-  text-align: center;
-  position: absolute;
-  right: 0;
-  top: 0;
-  background-color: #D1D8DC;
-  overflow: scroll
-}
 .bookmark-h1  {
   text-align: left;
   margin:10px;
@@ -152,7 +123,7 @@ button:hover {
   color: #455a64;
   
 }
-.read  {
+.bookmarksRead  {
   margin: 3%;
   width: 90%;
   height: 230px;
@@ -208,14 +179,8 @@ ul {
   margin: 3%;
   width: 90%;
   height: 230px;
-
-
   display: none;
   color: red;
-/*  margin: 0;
-  width: 0;
-  height: 0;*/
- 
 }
 
 
@@ -231,9 +196,45 @@ ul {
 }
 
 
-
-
-
+@media only screen and (max-width: 1000px) {
+ header  {
+   margin-bottom: 0px;
+   font-size: 35px;
+   display: inline;
+ }
+ .header-img  {
+   height: 3rem;
+ }
+ section  {
+   display: block;
+ }
+ .left  {
+   position: absolute;
+   display: block;
+   width: 50%;
+ }
+ .right  {
+   position: absolute;
+   /*top: 750px;*/
+   display: block;
+   width: 50%;
+   overflow: scroll;
+ }
+ p  {
+   display: inline;
+   font-size: 9vw;
+ }
+ #website-title,
+ #url,
+ #enter  {
+   width: 90%;
+   margin-bottom: 0px;
+ }
+ #enter  {
+   width: 91%;
+   margin-left: -5px;
+ }
+}
 
 
 
