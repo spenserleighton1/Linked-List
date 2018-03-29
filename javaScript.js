@@ -1,44 +1,42 @@
-var enterButton = document.querySelector("#enter");
-var websiteTitle = document.querySelector('#website-title');
-var websiteUrl = document.querySelector('#url');
+var enterButton = document.querySelector("#enter-button");
+var websiteTitle = document.querySelector('#website-input-field');
+var websiteUrl = document.querySelector('#url-input-field');
 var bookmarkTitle = document.querySelector('#bookmark')
 var websiteLink = document.querySelector('#websiteLink')
-// var readButton = document.querySelector('#readButton');
+var cardCount = 0;
 
-
-enterButton.onclick = function() {
- event.preventDefault();
- if (websiteTitle.value === "") {
+enterButton.onclick = function(e) {
+ e.preventDefault();
+ if (websiteTitle.value === "" || websiteUrl.value === "") {
   alert('Please fill required fields');
+  return
  } else {
-document.getElementById("list").innerHTML+=
-   `<article class="bookmarks">
-   <li class="unread" id="bookmarks">
-   <h1 class="bookmark-h1" id="bookmarks" width="100%">${websiteTitle.value}</h1>
-   <a id="websiteLink" href="${websiteUrl.value}">${websiteUrl.value}</a>
-   <button id="readButton">Read</button>
-   <button class="delete" id="deleteButton">Delete</button>
+  document.querySelector("#list").innerHTML +=
+   
+  `<article class="bookmarks">
+   <li class="unread">
+   <h1 class="websiteTitle" width="100%">${websiteTitle.value}</h1>
+   <a class="websiteLink" href="${websiteUrl.value}">${websiteUrl.value}</a>
+   <button class="read" id="readButton" onclick="markCardRead(${cardCount})">Read</button>
+   <button  id="deleteButton" onclick="deleteCard(${cardCount})">Delete</button>
    </li>
    </article>`
-
-// var deleteButton = document.querySelector("#deleteButton");
-// deleteButton.onclick = function() {
-//   if(deleteButton.className === 'delete'){
-//     // deleteButton.className = null;
-//   } else {
-//     deleteButton.className = 'delete';
-//   }
-// }
-
-var readButton = document.querySelector(".bookmarks");
-readButton.onclick = function() {
-if(readButton.className === 'read'){
-   readButton.className = 'bookmarks';
-   //change color of read button//
-} else {
-    readButton.className = 'read';
-     };
-   };
   };
+  
+  cardCount++;
+
+document.querySelector("form").reset();
+document.querySelector('.counter').innerText = cardCount;
 };
-//delete button acts same as read button because im targeting the bookmark class
+
+function markCardRead(cardId){
+  var bookmarkCard = document.querySelector('.bookmarks',)
+  bookmarkCard.classList.toggle('bookmarksRead');
+};
+
+function deleteCard(cardId){
+  cardCount = cardCount -1;
+  document.querySelector('.counter').innerText = cardCount;
+  var bookmarkCard = document.querySelector('.bookmarks');
+  bookmarkCard.className ='delete';
+};
