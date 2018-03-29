@@ -229,7 +229,7 @@ h2 {
 .counter {
   display: inline-block;
   text-align: center;
-  color: blue;
+  color: #455A64;
   z-index: 1;
   font-size: 20px;
   position: fixed;
